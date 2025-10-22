@@ -1,4 +1,6 @@
 //IG JS IL 6th c final
 #include <stdio.h>
-#include <sting.h>
+#include <string.h>
 #include <time.h>
+#include <stdlib.h>
+

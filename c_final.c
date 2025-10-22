@@ -42,14 +42,17 @@
 
 int main(void){
 
-//ian wuz here
-    char list[] = {
-        "quark", "ocean", "water", "ducky","smoke","train", "layer","alone","brain","craft","paint","flute","beach","heart","human","image","lemon","lucky","mouse","metal","noise","plane","phone","power","quiet","ready","store","sport","storm","today","table","under","video","watch","young","slate","crane","brick","slate","stare","raise","arise","farts","bread"
+//ian wuz here -- added a * thats whats wrong (-Eliza yur welcom)
+    char* list[] = {
+        "quark", "ocean", "water", "ducky","smoke","train", "layer","alone","brain","craft","paint",
+        "flute","beach","heart","human","image","lemon","lucky","mouse","metal","noise","plane","phone",
+        "power","quiet","ready","store","sport","storm","today","table","under","video","watch","young",
+        "slate","crane","brick","slate","stare","raise","arise","farts","bread"
     };
     
     int num;
     srand(time(NULL));
-    for (int i=0; i>10; i++){
+    for(int i=0; i>10; i++){
     int num = rand() %44;
     printf("%s\n",list[num]);
     return 0;

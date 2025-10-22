@@ -1,4 +1,12 @@
-//Eliza
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+int main() {
+
+
+/*Eliza
     void guess();
         char user_input[2];
         char guessed_letters[20];
@@ -15,7 +23,7 @@
         }else{
             printf("Incorrect, guess again.");
             return 1;
-        }
+        }*/
         
         /*    printf("Please enter a valid letter.");
             return 0;
@@ -36,3 +44,11 @@
         else
             printf("Incorrect, guess again.");
             return 1; */
+
+            
+
+
+    
+
+return 0;
+}
