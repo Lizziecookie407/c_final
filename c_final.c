@@ -1,4 +1,4 @@
-// EH JS IG 
+// EH JS IG IL
 
 
 #include <stdio.h>
@@ -38,11 +38,15 @@
         else:
             printf("Incorrect, guess again.");
             return 1; */
-    
+    //Juliette
+int you_lost() {
+    printf("You lost! The word was: %s\n", word);
+    return strikes + 1;
+}
 
 int main(void){
 
-//ian wuz here -- added a * thats whats wrong (-Eliza yur welcom)
+//ian wuz here
     char* list[] = {
         "quark", "ocean", "water", "ducky","smoke","train", "layer","alone","brain","craft","paint",
         "flute","beach","heart","human","image","lemon","lucky","mouse","metal","noise","plane","phone",
@@ -57,41 +61,40 @@ int main(void){
     printf("%s\n",list[num]);
     return 0;
     }
-
+iu 
     char word[] = list[num];
     //list=random.choice(list);
 
     char space="_";
     int strikes=0;
 
-
-
-
     printf("Hi welcome to hangman!\nThis game consists of an unknown five letter word. First, begin to assemble the word by guessing one letter at a time. Second, if you guess a letter that is not in the word, a strike will appear. If you gain 8 strikes, you're out. Lastly, if you think you know the word, you can guess the whole word at once. Try to fill in the whole word with minimal strikes. Have fun playing!");
 
-
-    
     char output_list[20];
-    //isabellla:)
+    
+    //isabellla:) 
     while(strikes < 8){
-        strikes += guess() // so for guess, i think it can't be a funtion, so I'm going to put my part straight in this loop and just go through all the guess parts
-        printf("Strikes" strikes);
+        
+        strikes += guess();
+        printf("Strikes =", strikes);
     };
-    for("letter in word"){
-        if letter in guessed_letters:
-            output_list += letter
-        else if;
-            output_list += space
-    }
-    output = (' '.join(output_list))
-    print(output)
-    output_list = []
+    output = ("".join(output_list));
+    printf(output);
+    output_list = [ ];
+
     //juliette
-    if (user_input == word){
-        printf("Good job, you guess the word! Rerun the code to play again")
-    }
+    if (strcmp(word, user_input) == 0) {
+    printf("Yes that is the word! congratulations. Rerun code to play another round.\n");
+    break;
+} else {
+    continue;
+}
 
 
+if (strikes == 8) {
+    strikes = you_lost();
+}
     
 return 0;
 }
+
