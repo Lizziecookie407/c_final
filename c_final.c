@@ -74,7 +74,7 @@ int main(void){
     char output_list[20];
     //isabellla:)
     while(strikes < 8){
-        strikes += guess()
+        strikes += guess() // so for guess, i think it can't be a funtion, so I'm going to put my part straight in this loop and just go through all the guess parts
         printf("Strikes" strikes);
     };
     for("letter in word"){

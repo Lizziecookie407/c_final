@@ -3,7 +3,12 @@
 #include <string.h>
 #include <time.h>
 
-int main() {
+
+int main(void) {
+
+}
+
+
 
 
 /*Eliza
@@ -44,11 +49,3 @@ int main() {
         else
             printf("Incorrect, guess again.");
             return 1; */
-
-            
-
-
-    
-
-return 0;
-}
