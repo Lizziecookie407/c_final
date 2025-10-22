@@ -61,7 +61,7 @@ int main(void){
     printf("%s\n",list[num]);
     return 0;
     }
-iu 
+
     char word[] = list[num];
     //list=random.choice(list);
 
