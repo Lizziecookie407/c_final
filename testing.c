@@ -3,18 +3,36 @@
 #include <string.h>
 #include <time.h>
 
-// Eliza - prints the whole output, including the spaces, strikes, and the letters already guessed
+// Eliza - prints the whole output, including the spaces, strikes, the hangman picture, and the letters already guessed
 void output(char display[], int word_length, int strikes) {
-    char picture[20];
-    if(strikes = 8){
-        char picture[20] = "|-------¿\n|        O\n|      ≤))≥\n|      _| \_\n|___________\n";
-    else if (strikes = 7);
+    char picture[60];
+    if(strikes == 8){
+        char picture[60] = "|------¿\n|      O\n|     ≤))≥\n|     _|\_\n|___________";
+    }else if (strikes == 7){
+        char picture[60] = "|------¿\n|      O\n|     ≤))≥\n|     _|\ \n|___________";
+    }else if (strikes == 6){
+        char picture[60] = "|------¿\n|      O\n|     ≤))≥\n|      |\ \n|___________";
+    }else if (strikes == 5){
+        char picture[60] = "|------¿\n|      O\n|     ≤))≥\n|      | \n|___________";
+    }else if (strikes == 4){
+        char picture[60] = "|------¿\n|      O\n|     ≤))≥\n|\n|___________";
+    }else if (strikes == 3){
+        char picture[60] = "|------¿\n|      O\n|     ≤))\n|\n|___________";
+    }else if (strikes == 2){
+        char picture[60] = "|------¿\n|      O\n|      ))\n|\n|___________";
+    }else if (strikes == 1){
+        char picture[60] = "|------¿\n|      O\n|\n|\n|___________";
+    }else if (strikes == 0){
+        char picture[60] = "|------¿\n|\n|\n|\n|___________";
+    }else{
+        char picture[60] = "|------¿\n|\n|\n|\n|___________";
     }
+    
 
     for (int i = 0; i < word_length; i++) {
         printf("%c ", display[i]);
     }
-    printf("\nStrikes: %d\n%s\n", strikes, picture);
+    printf("\nStrikes: %d\n%s\n\n", strikes, picture);
 }
 
 // Isabella
