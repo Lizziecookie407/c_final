@@ -6,7 +6,7 @@
 
 
 int main(void){
-
+    
     char* list[] = {
         "quark", "ocean", "water", "ducky","smoke","train", "layer","alone","brain","craft","paint",
         "flute","beach","heart","human","image","lemon","lucky","mouse","metal","noise","plane","phone",
