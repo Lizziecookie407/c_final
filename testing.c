@@ -28,14 +28,13 @@ void output(char display[], int word_length, int strikes) {
         char picture[60] = "|------¿\n|\n|\n|\n|___________";
     }
     
-
     for (int i = 0; i < word_length; i++) {
         printf("%c ", display[i]);
     }
     printf("\nStrikes: %d\n%s\n\n", strikes, picture);
 }
 
-// Isabella
+// Isabella and juliette
 int already_guessed(char guess, char guessed_letters[], int guessed_count) {
     for (int i = 0; i < guessed_count; i++) {
         if (guess == guessed_letters[i]) {
@@ -59,7 +58,7 @@ int main() {
         "antidisestablishmentarianism","floccinaucinihilipilification",
         "defenistration"
     };
-//picks a random word out of the 
+//picks a random word out of the list of words using a random number
     srand(time(NULL));
     int num_words = sizeof(words) / sizeof(words[0]);
     char *word = words[rand() % num_words];
@@ -133,7 +132,7 @@ int main() {
         }
     }
 // so this is the end of the while strikes < 8 loop, so if it gets to this, the player lost.
-    printf("\nYou lost! The word was: %s. ", word);
+    printf("You lost! ELIZA WUZ HERE The word was: %s. " word);
     printf("Rerun the code to play another round.");
     return 0;
 
