@@ -99,7 +99,7 @@ int main() {
                 printf("\nHorray! You guessed the word! It was: %s.\n", word);
                 printf("Rerun the code to play another round.\n");// final output if they got the word right
                 return 0;
-            }else {
+            }else{
                 printf("Incorrect (only guess one letter, unless going for the whole word).\n");
                 strikes++;
                 continue;
