@@ -49,14 +49,16 @@ int main() {
 //list of words
     char *words[] = {
         "ocean","water","ducky","smoke","train","father","action","choice",
-        "layer","alone","brain","craft","paint","flute","beach","heart",
-        "human","image","lemon","lucky","mouse","metal","noise","plane",
-        "phone","power","quiet","ready","store","sport","storm","today",
-        "table","under","video","watch","young","slate","crane","brick",
+        "layer","alone","brain","cheese","rat","tungtungtungsahu" "craft","paint","flute","beach","heart",
+        "human","image","lemon","lucky","mouse","metal","noise","plane","enunciate","renounce","pronouncement","ineffable","infantile","affable",
+        "phone","power","quiet","ready","store","sport","storm","beefstake","today","circumspect","prospect","phototrtopic","phosphorescent","photogenic","prohibit","inhibit","sustain","abstain","tenacious","retinue",
+        "table","under","video","watch","young","slate","crane","brick", "impose","posit","disposition","misinformation","reform","formative","legacy","delegate","repulsion","dispel","propel",
         "stare","raise","arise","bread","hippopotomonstrosesquippedaliophobia",
         "pneumonoultramicroscopicsilicovolcanoconiosis","supercalifragilisticexpialidocious",
-        "antidisestablishmentarianism","floccinaucinihilipilification",
-        "defenistration"
+        "antidisestablishmentarianism","floccinaucinihilipilification","recant","incantation","disenchanted","inaudible","auditory","audit","dissonance","assonance","resonant","analogous","dialogue","prologue",
+        "defenistration","tenticle","propel","specter","figmennt","effigy","prefigure","inept","adept","aptitude","agenda","proactive","exacting","relative","superlative","dilate",
+        "invidious","providential","improvise","lucid","translucent","elucidate","Suffuse","confound","infuse", "replete", "implement", "deplete", "invoke", "provocative", "revoke", "edict", "indict", "dictum",
+
     };
 //picks a random word out of the list of words using a random number
     srand(time(NULL));
@@ -80,19 +82,18 @@ int main() {
     }
     display[word_length] = '\0';
 
-//  Isabella
+//  Isabella -user geussing the letter
     while(strikes < 8){
         output(display, word_length, strikes); // calls output funtion
 
         char user_input[20];
         printf("Guess a letter: ");
         scanf("%s", user_input);
-// user geussing the letter-isabella
+// this code is checking to see if the letter was already guessed-isabella
         if(already_guessed(user_input[0], guessed_letters, guessed_count)){
             printf("You already guessed that letter!\n");
             continue;
         }
-// this code is checking to see if the letter was already guessed-isabella
         if(strlen(user_input) > 1){
             if(strcmp(user_input, word) == 0){
                 printf("\nHorray! You guessed the word! It was: %s.\n", word);
@@ -131,8 +132,8 @@ int main() {
             return 0;
         }
     }
-// so this is the end of the while strikes < 8 loop, so if it gets to this, the player lost.
-    printf("You lost! ELIZA WUZ HERE The word was: %s. " word);
+//so this is the end of the while strikes < 8 loop, so if it gets to this, the player lost.
+    printf("\nYou lost! The word was: %s. ", word);
     printf("Rerun the code to play another round.");
     return 0;
 
