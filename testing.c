@@ -4,7 +4,7 @@
 #include <time.h>
 
 // Eliza - prints the whole output, including the spaces, strikes, the hangman picture, and the letters already guessed
-void output(char display[], int word_length, int strikes) {
+void output(char display[], int word_length, int strikes){
     char picture[60];
     if(strikes == 8){
         char picture[60] = "|------¿\n|      O\n|     ≤))≥\n|     _|\_\n|___________";
@@ -28,16 +28,16 @@ void output(char display[], int word_length, int strikes) {
         char picture[60] = "|------¿\n|\n|\n|\n|___________";
     }
     
-    for (int i = 0; i < word_length; i++) {
+    for(int i = 0; i < word_length; i++){
         printf("%c ", display[i]);
     }
     printf("\nStrikes: %d\n%s\n\n", strikes, picture);
 }
 
 // Isabella and juliette
-int already_guessed(char guess, char guessed_letters[], int guessed_count) {
-    for (int i = 0; i < guessed_count; i++) {
-        if (guess == guessed_letters[i]) {
+int already_guessed(char guess, char guessed_letters[], int guessed_count){
+    for(int i = 0; i < guessed_count; i++){
+        if(guess == guessed_letters[i]){
             return 1;
         }
     }
@@ -49,16 +49,14 @@ int main() {
 //list of words
     char *words[] = {
         "ocean","water","ducky","smoke","train","father","action","choice",
-        "layer","alone","brain","cheese","rat","tungtungtungsahu" "craft","paint","flute","beach","heart",
+        "layer","alone","brain","cheese","craft","paint","flute","beach","heart",
         "human","image","lemon","lucky","mouse","metal","noise","plane","enunciate","renounce","pronouncement","ineffable","infantile","affable",
         "phone","power","quiet","ready","store","sport","storm","beefstake","today","circumspect","prospect","phototrtopic","phosphorescent","photogenic","prohibit","inhibit","sustain","abstain","tenacious","retinue",
         "table","under","video","watch","young","slate","crane","brick", "impose","posit","disposition","misinformation","reform","formative","legacy","delegate","repulsion","dispel","propel",
-        "stare","raise","arise","bread","hippopotomonstrosesquippedaliophobia",
-        "pneumonoultramicroscopicsilicovolcanoconiosis","supercalifragilisticexpialidocious",
+        "stare","raise","arise","bread","hippopotomonstrosesquippedaliophobia","pneumonoultramicroscopicsilicovolcanoconiosis","supercalifragilisticexpialidocious",
         "antidisestablishmentarianism","floccinaucinihilipilification","recant","incantation","disenchanted","inaudible","auditory","audit","dissonance","assonance","resonant","analogous","dialogue","prologue",
         "defenistration","tenticle","propel","specter","figmennt","effigy","prefigure","inept","adept","aptitude","agenda","proactive","exacting","relative","superlative","dilate",
         "invidious","providential","improvise","lucid","translucent","elucidate","Suffuse","confound","infuse", "replete", "implement", "deplete", "invoke", "provocative", "revoke", "edict", "indict", "dictum",
-
     };
 //picks a random word out of the list of words using a random number
     srand(time(NULL));
@@ -81,11 +79,9 @@ int main() {
         display[i] = '_';
     }
     display[word_length] = '\0';
-
 //  Isabella -user geussing the letter
     while(strikes < 8){
         output(display, word_length, strikes); // calls output funtion
-
         char user_input[20];
         printf("Guess a letter: ");
         scanf("%s", user_input);
@@ -123,18 +119,16 @@ int main() {
             printf("Incorrect!\n");
             strikes++;
         }
-
-
 //Juliette        
         if(strcmp(word, display) == 0){ //So for the strcmp if the word is the same, it returns a 0, which means the player got the word right.
-            printf("\nHorray! You guessed the word! It was: %s.\n", word);
-            printf("Rerun code to play another round.\n");
+            printf("\nHorray! You guessed the word! It was: %s.", word);
+            printf("Rerun code to play another round.\n\n");
             return 0;
         }
     }
 //so this is the end of the while strikes < 8 loop, so if it gets to this, the player lost.
     printf("\nYou lost! The word was: %s. ", word);
-    printf("Rerun the code to play another round.");
+    printf("Rerun the code to play another round.\n\n");
     return 0;
 
 return 0;
